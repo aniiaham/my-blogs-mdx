@@ -6,7 +6,6 @@ import { Button } from "./ui/button";
 import { MenuIcon } from "lucide-react";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
-import { Icons } from "./icons";
 import { siteConfig } from "@/config/site";
 
 export function MobileNav() {
@@ -26,7 +25,6 @@ export function MobileNav() {
           onOpenChange={setOpen}
           className="flex items-center"
         >
-          <Icons.logo className="mr-2 h-4 w-4" />
           <span className="font-bold">{siteConfig.name}</span>
         </MobileLink>
         <div className="flex flex-col gap-3 mt-3">
