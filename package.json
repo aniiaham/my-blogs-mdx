@@ -20,7 +20,10 @@
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "@next/mdx": "15.0.3",
+    "sugar-high": "^0.7.5",
+    "next-view-transitions": "^0.3.2"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -30,7 +33,6 @@
     "eslint-config-next": "15.0.2",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5",
-    "velite": "^0.2.1"
+    "typescript": "^5"
   }
 }
