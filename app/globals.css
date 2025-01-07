@@ -4,6 +4,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 4rem;
 }
 
 @layer base {
@@ -78,17 +79,12 @@ html {
   scrollbar-gutter: stable;
 }
 
-body {
-  text-rendering: optimizeLegibility;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5 {
   margin-left: 4rem;
-  font-weight: 600;
 }
 p {
   margin-left: 4rem;
@@ -101,6 +97,8 @@ pre {
   overflow-x: auto;
   padding: 1rem;
   margin: 1.5rem 0;
+  margin-left: 4rem;
+  margin-right: 4rem;
   line-height: 1;
 }
 
