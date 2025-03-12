@@ -3,7 +3,7 @@ import { NameTransition } from "./name";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import StateManagementImg from "@/public/state-management.jpg";
 
 export default function Home() {
   return (
@@ -24,25 +24,29 @@ export default function Home() {
           className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl"
         />
         <p className="text-lg max-w-lg">
-          <span className="font-bold">Hi, I&apos;m Aniia Hamilton</span>, a
           Frontend Web Developer who ❤️ creating modern, responsive websites
           that function smoothly. My stack - JavaScript, TypeScript, React,
           Next.js, Node.js, and Tailwind CSS.
         </p>
       </div>
-      <div className="border border-b-gray-300  max-w-lg w-full mt-12"></div>
-      <hr className="mt-12" />
-      <div className="flex flex-col justify-center">
-        <p className="text-lg font-bold">​​React Query как State Manager</p>
-        <Link
-          href={"/n/state-manager"}
-          className={cn(
-            buttonVariants({ variant: "link" }),
-            "py-0 text-sm sm:text-base font-medium hover:no-underline"
-          )}
-        >
-          Read more <ArrowRight className="w-2 h-2" />
-        </Link>
+      <h2 className="text-xl text-muted-foreground">Translated Blogs</h2>
+      <div className="w-full flex flex-col justify-center my-32">
+        <div className="flex flex-row justify-start w-full">
+          <Link
+            href={"/n/state-manager"}
+            className={cn(
+              buttonVariants({ variant: "link" }),
+              "py-0 text-sm sm:text-base flex flex-col font-medium hover:no-underline"
+            )}
+          >
+            <Image
+              src={StateManagementImg}
+              alt="state management image"
+              className="h-56 w-64"
+            />
+            <p className="text-lg font-bold">​​React Query как State Manager</p>
+          </Link>
+        </div>
       </div>
     </section>
   );
