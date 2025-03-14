@@ -7,14 +7,18 @@ export const metadata = {
 import Image from "next/image";
 import StateManagementImg from "@/public/state-management.jpg";
 
-## React Query как State Manager
+# React Query как State Manager
+
+##### 20.08.2021 — ReactJs, React Query, JavaScript, TypeScript — 7 min read - TkDodo
 
 <Image
   src={StateManagementImg}
   alt="state management image"
   priority
-  className="rounded"
+  className="rounded flex items-center justify-center container mx-auto max-w-xl w-full mb-8"
 />
+
+Этот пост является частью блога <a href="https://tkdodo.eu/blog/" target="_blank" className="underline font-bold mb-8">TkDodo</a> и является переводом на русский язык.
 
 Многие любят React Query за значительное упрощение получения данных в приложениях React. Поэтому для вас может стать неожиданностью, если я скажу, что React Query на самом деле не является библиотекой для извлечения данных.
 Он сам по себе не извлекает никаких данных, и лишь небольшой набор функций напрямую связан с сетью (например, OnlineManager, refetchOnReconnect или повторная попытка при оффлайн-мутации). Это также становится очевидным, когда вы пишете свой первый queryFn и вам нужно использовать что-то для получения данных, например fetch, axios, ky или даже graphql-request.

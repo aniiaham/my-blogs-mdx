@@ -1,6 +1,7 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import { Link } from "next-view-transitions";
 import { highlight } from "sugar-high";
+import Image, { ImageProps } from "next/image";
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
@@ -10,11 +11,18 @@ type AnchorProps = ComponentPropsWithoutRef<"a">;
 type BlockquoteProps = ComponentPropsWithoutRef<"blockquote">;
 
 const components = {
+  img: (props: ImageProps) => (
+    <Image
+      {...props}
+      className="flex flex-col justify-center items-center"
+      alt=""
+    />
+  ),
   h1: (props: HeadingProps) => (
-    <h1 className="font-medium pt-12 mb-0 fade-in" {...props} />
+    <h1 className="font-bold text-4xl mb-3 pt-12 fade-in" {...props} />
   ),
   h2: (props: HeadingProps) => (
-    <h2 className="text-gray-800 font-bold text-xl mt-8 mb-3" {...props} />
+    <h2 className="text-gray-800 font-bold text-2xl mt-8 mb-3" {...props} />
   ),
   h3: (props: HeadingProps) => (
     <h3 className="text-gray-800 font-bold italic mt-8 mb-3" {...props} />
@@ -22,6 +30,9 @@ const components = {
   h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
   p: (props: ParagraphProps) => (
     <p className="text-gray-800 leading-snug" {...props} />
+  ),
+  h5: (props: HeadingProps) => (
+    <h5 className="text-muted-foreground mb-8" {...props} />
   ),
   ol: (props: ListProps) => (
     <ol className="text-gray-800 list-decimal pl-5 space-y-2" {...props} />

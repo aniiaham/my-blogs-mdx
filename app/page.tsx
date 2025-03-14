@@ -29,7 +29,9 @@ export default function Home() {
           Next.js, Node.js, and Tailwind CSS.
         </p>
       </div>
-      <h2 className="text-xl text-muted-foreground">Translated Blogs</h2>
+      <p className="text-xl text-muted-foreground text-start">
+        Translated Blogs
+      </p>
       <div className="w-full flex flex-col justify-center my-32">
         <div className="flex flex-row justify-start w-full">
           <Link
