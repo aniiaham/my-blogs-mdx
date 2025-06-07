@@ -14,7 +14,7 @@ export function NameTransition() {
             </span>
           ))}
         </span>
-        <span className="inline-block absolute left-16 top-0 transition-all duration-300 ease-in-out translate-y-full group-hover:translate-y-0">
+        <span className="w-full left-4 inline-block absolute transition-all duration-300 ease-in-out translate-y-full group-hover:translate-y-0">
           {"aniia.dev".split("").map((letter, index) => (
             <span
               key={index}
