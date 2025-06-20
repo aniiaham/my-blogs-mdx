@@ -29,7 +29,7 @@ const components = {
   ),
   h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
   p: (props: ParagraphProps) => (
-    <p className="text-gray-800 leading-snug" {...props} />
+    <p className="text-gray-800 leading-snug text-lg" {...props} />
   ),
   h5: (props: HeadingProps) => (
     <h5 className="text-muted-foreground mb-8" {...props} />

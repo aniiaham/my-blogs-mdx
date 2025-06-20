@@ -23,15 +23,6 @@ export function MainNav() {
       >
         Blog
       </Link>
-      <Link
-        href="/about"
-        className={cn(
-          "text-sm font-medium transitions-colors hover:text-primary hidden sm:inline-flex",
-          pathname === "/about" ? "text-foreground" : "text-foreground/60"
-        )}
-      >
-        About
-      </Link>
     </nav>
   );
 }

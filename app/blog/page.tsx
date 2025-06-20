@@ -1,7 +1,9 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import StateManagementImg from "@/public/state-management.jpg";
 
 export default function BlogPage() {
   return (
@@ -17,21 +19,27 @@ export default function BlogPage() {
           </p>
         </div>
       </div>
-      <hr className="mt-8" />
-      <div className="flex items-center mt-4 w-full">
-        <Link
-          href={"/n/state-manager"}
-          className={cn(
-            buttonVariants({ variant: "link" }),
-            "py-0 text-sm sm:text-base font-medium hover:no-underline"
-          )}
-        >
-          <p className="text-2xl font-bold">​​React Query как State Manager</p>
-          <div className="hover:border-gray-400 flex flex-row items-center gap-2">
-            Read more <ArrowRight className="w-2 h-2" />
-          </div>
-        </Link>
+      <div className="w-full flex flex-row justify-center my-32">
+        <div className="flex flex-row justify-start w-full">
+          <Link
+            href={"/n/state-manager"}
+            className={cn(
+              buttonVariants({ variant: "link" }),
+              "py-0 text-sm sm:text-base flex flex-col font-medium hover:no-underline"
+            )}
+          >
+            <Image
+              src={StateManagementImg}
+              alt="state management image"
+              className="h-58 w-64 rounded"
+            />
+            <p className="text-lg font-medium">
+              ​ ​React Query как State Manager
+            </p>
+          </Link>
+        </div>
       </div>
+      <hr className="mt-8" />
     </div>
   );
 }
