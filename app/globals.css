@@ -86,6 +86,7 @@ h3,
 h4,
 h5 {
   margin-left: 4rem;
+  font-family: monospace;
 }
 p {
   margin-left: 4rem;
@@ -93,7 +94,7 @@ p {
 }
 
 pre {
-  background-color: #16161e;
+  background-color: #09090a;
   border-radius: 0.5rem;
   overflow-x: auto;
   padding: 1rem;
@@ -110,6 +111,13 @@ pre::-webkit-scrollbar {
 pre {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+a:link {
+  color: blue;
+}
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 code {

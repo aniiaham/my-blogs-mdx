@@ -1,6 +1,5 @@
 "use client";
 
-import { siteConfig } from "@/config/site";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
@@ -15,13 +14,13 @@ export function MainNav() {
         <Image src={logo} alt="AH logo" height={60} />
       </Link>
       <Link
-        href="/blog"
+        href="/blogs"
         className={cn(
-          "text-sm font-medium transitions-colors hover:text-primary hidden sm:inline-flex",
-          pathname === "/blog" ? "text-foreground" : "text-foreground/60"
+          "text-base font-medium font-mono  transitions-colors uppercase  text-black hover:text-primary hidden sm:inline-flex",
+          pathname === "/blogs" ? "text-foreground" : "text-foreground/60"
         )}
       >
-        Blog
+        Blogs
       </Link>
     </nav>
   );

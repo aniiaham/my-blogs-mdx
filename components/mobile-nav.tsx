@@ -22,9 +22,9 @@ export function MobileNav() {
 
       <SheetContent side="right">
         <SheetTitle></SheetTitle>
-        <div className="flex flex-col gap-3 mt-3">
-          <MobileLink onOpenChange={setOpen} href="/blog">
-            Blog
+        <div className="flex flex-col gap-3 mt-3 text-black uppercase font-mono">
+          <MobileLink onOpenChange={setOpen} href="/blogs">
+            Blogs
           </MobileLink>
           <MobileLink onOpenChange={setOpen} href="/about">
             About
