@@ -14,28 +14,32 @@ export function MobileNav() {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant={"outline"} className="w-10 px-0 sm:hidden">
+        <Button variant="ghost" size="icon" className="sm:hidden">
           <MenuIcon className="h-5 w-5" />
-          <span className="sr-only">Toggle Theme</span>
+          <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
 
-      <SheetContent side="right">
-        <SheetTitle></SheetTitle>
-        <div className="flex flex-col gap-3 mt-3 text-black uppercase font-mono">
-          <MobileLink onOpenChange={setOpen} href="/blogs">
+      <SheetContent side="right" className="w-72">
+        <SheetTitle className="text-lg font-semibold mb-6">Menu</SheetTitle>
+        <nav className="flex flex-col gap-4">
+          <MobileLink onOpenChange={setOpen} href="/blogs" className="text-base font-medium hover:text-primary transition-colors">
             Blogs
           </MobileLink>
-          <MobileLink onOpenChange={setOpen} href="/about">
-            About
-          </MobileLink>
-          <Link target="_blank" rel="noreferrer" href={siteConfig.link.github}>
+          <hr className="border-border" />
+          <Link
+            target="_blank"
+            rel="noreferrer"
+            href={siteConfig.link.github}
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
             GitHub
           </Link>
           <Link
             target="_blank"
             rel="noreferrer"
             href={siteConfig.link.linkedIn}
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             LinkedIn
           </Link>
@@ -43,10 +47,11 @@ export function MobileNav() {
             target="_blank"
             rel="noreferrer"
             href={siteConfig.link.personalSite}
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Personal Website
           </Link>
-        </div>
+        </nav>
       </SheetContent>
     </Sheet>
   );
@@ -71,7 +76,7 @@ function MobileLink({
       href={href}
       onClick={() => {
         router.push(href.toString());
-        onOpenChange?.(false); // onClick closes mobile nav menu
+        onOpenChange?.(false);
       }}
       className={className}
       {...props}

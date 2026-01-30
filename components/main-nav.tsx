@@ -8,16 +8,19 @@ import logo from "@/app/AH-logo.png";
 
 export function MainNav() {
   const pathname = usePathname();
+
   return (
-    <nav className="flex items-center space-x-4 lg:space-x-6">
-      <Link href="/" className="ml-6 flex items-center space-x-2">
-        <Image src={logo} alt="AH logo" height={60} />
+    <nav className="flex items-center gap-6">
+      <Link href="/" className="flex items-center gap-2">
+        <Image src={logo} alt="AH logo" height={40} className="h-10 w-auto" />
       </Link>
       <Link
         href="/blogs"
         className={cn(
-          "text-base font-medium font-mono  transitions-colors uppercase  text-black hover:text-primary hidden sm:inline-flex",
-          pathname === "/blogs" ? "text-foreground" : "text-foreground/60"
+          "text-sm font-medium transition-colors hover:text-primary",
+          pathname === "/blogs"
+            ? "text-foreground"
+            : "text-muted-foreground"
         )}
       >
         Blogs
