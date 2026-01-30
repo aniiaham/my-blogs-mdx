@@ -22,7 +22,7 @@ export default function Home() {
 
           <div className="flex-1">
             <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              Hi, I'm <span className="text-primary">Aniia</span>
+              Hi, I&apos;m <span className="text-primary">Aniia</span>
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
               Full-stack developer from Russia living in the US. Welcome to my
@@ -73,7 +73,7 @@ export default function Home() {
                 </h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
                   A comprehensive guide to using React Query as your
-                  application's state management solution. Translated from
+                  application&apos;s state management solution. Translated from
                   Russian.
                 </p>
               </div>
